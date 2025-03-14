@@ -15,6 +15,10 @@ const HUGGINGFACE_API_KEY = process.env.HUGGINGFACE_API_KEY; // Certifique-se de
 app.use(cors());
 app.use(json());
 
+app.get('/', (req, res) => {
+    res.send('Eu amo Maria de Fátima! E esse servidor esta rodando :)');
+});
+
 app.post('/ia', async (req, res) => {
     const { mood } = req.body;
 
